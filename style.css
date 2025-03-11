@@ -1,5 +1,6 @@
 :root {
   --color-black: #000;
+  --color-white: #fff;
   --color-darkgrey: #262626;
   --color-maincolor: #FEFAE0;
 
@@ -89,7 +90,7 @@ img {
 
 body {
   font-family: 'Tonis', Arial, sans-serif;
-  background-color: var(--color-maincolor);
+  background-color: var(--color-white);
   color: var(--color-darkgrey);
 }
 
@@ -101,7 +102,7 @@ body {
   margin: 0 auto;
 }
 
-.services-header, .services-title, .about-header{
+.services-header, .services-title, .about-header, .stylists-header{
   font-size: var(--small-header);
   text-align: center;
   font-weight: 700;
@@ -337,11 +338,13 @@ header {
 
 .about {
   padding: 4rem 0;
+  border-bottom: 1px solid var(--color-darkgrey);
 }
 
 
 .about-title {
   font-size: var(--medium-text);
+  color: #cc9c83;
   text-align: left;
   text-transform: uppercase;
   margin: 1rem 0 .5rem 0;
@@ -372,11 +375,46 @@ header {
 }
 
 /* STYLIST */
+.stylists {
+  padding: 4rem 0;
+}
 
+.stylists-header {
+  text-align: center;
+}
 
+.img-container {
+  /* border: 1px solid red; */
+  width: 100%;
+  max-width: 500px;
+}
 
+.img-container img {
+  width: 100%;
+  height: 350px;
+  display: block;
+  background-color: #000;
+  margin-bottom: 1rem;
+}
 
+.stylist-details {
+  font-family: var(--default-text);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--medium-text);
+  font-weight: 700;
+  color: var();
+  letter-spacing: .15rem;
+}
 
+.stylist-name {
+  color: #cc9c83;
+}
+
+.stylist-details span {
+  font-size: var(--small-text);
+  font-weight: 500;
+}
 
 
 /* PROMO */
@@ -385,3 +423,4 @@ header {
   padding: 4rem 0;
   background-color: #fff;
 }
+
