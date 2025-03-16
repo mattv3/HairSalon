@@ -102,7 +102,7 @@ body {
   margin: 0 auto;
 }
 
-.services-header, .services-title, .about-header, .stylists-header{
+.services-header, .services-title, .about-header, .stylists-header, .lookbook-header{
   font-size: var(--small-header);
   text-align: center;
   font-weight: 700;
@@ -111,7 +111,7 @@ body {
   letter-spacing: .15em;
 }
 
-.services-header, .about-header, .stylists-header {
+.services-header, .about-header, .stylists-header, .lookbook-header {
   margin-bottom: 2.5rem;
 }
 
@@ -383,7 +383,7 @@ header {
 }
 
 .stylist-tiles:nth-of-type(-n + 2) {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .stylists-header {
@@ -392,8 +392,9 @@ header {
 
 .img-container {
   /* border: 1px solid red; */
-  width: 100%;
+  width: 90%;
   max-width: 500px;
+  margin: 0 auto;
 }
 
 .img-container img {
@@ -426,21 +427,97 @@ header {
 
 /* PROMO */
 
-.promo {
-  padding: 4rem 0;
-  background-color: #fff;
-}
-
 .promo-container {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
-.promo-img {
+.promo__text--container {
   position: absolute;
+  align-self: center;
+  left: 10%;
+  font-size: var(--medium-text);
+  text-transform: uppercase;
+  line-height: 1.5;
+}
 
+.promo-highlight {
+  font-size: var(--default-text);
+  font-weight: 500;
+}
+
+.promo-text {
+  font-weight: 500;
+}
+
+.promo-text span {
+  font-weight: 900;
+  color: var();
+}
+
+/* LOOKBOOK */
+
+.lookbook {
+  padding: 4rem 0;
 }
 
 
+.lookbook-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: .5rem;
+}
+
+.section-five__wrapper img {
+  grid-template-columns: 1fr;
+}
+
+
+.img-one {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row: 1 / 1;
+  grid-column: 1 / 2;
+}
+
+.img-two {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row: 2 / 4;
+  grid-column: 1 / 2;
+}
+
+.img-three {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+}
+
+.img-four {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+
+.img-five {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row: 1 / 1;
+  grid-column: 3 / 4;
+}
+
+.img-six {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-row: 2 / 4;
+  grid-column: 3 / 4;
+}
