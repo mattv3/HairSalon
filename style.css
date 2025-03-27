@@ -13,6 +13,11 @@
   --small-text: 1.125rem; /*18px*/
   --medium-text: 1.5rem; /*24px*/
   --large-text: 3rem; /*48px*/
+
+  /* fonts */
+  --primary-font: 'Montserrat', sans-serif;
+  --header-font: 'Tinos', sans-serif; 
+  --hero-font: 'Playfair Display', sans-serif;
 }
 
 
@@ -89,7 +94,7 @@ img {
 }
 
 body {
-  font-family: 'Tonis', Arial, sans-serif;
+  font-family: var(--primary-font);
   background-color: var(--color-white);
   color: var(--color-darkgrey);
 }
@@ -102,11 +107,11 @@ body {
   margin: 0 auto;
 }
 
-.services-header, .services-title, .about-header, .stylists-header, .lookbook-header, .footer-subheaders{
+.services-header, .services-title, .about-header, .stylists-header, .lookbook-header, .footer-headers{
   font-size: var(--small-header);
   text-align: center;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   text-transform: uppercase;
   letter-spacing: .15em;
 }
@@ -256,7 +261,7 @@ header {
 
 .hero-title {
   font-size: 3rem;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: var(--hero-font);
   font-weight: bold;
   color: #9fbd3f;
   text-transform: uppercase;
@@ -269,7 +274,7 @@ header {
 }
 
 .hero-subtitle {
-  font-family: 'Tinos', sans-serif;
+  font-family: var(--header-font);
   font-size: 2rem;
   color: #161f0d;
   padding: 1rem 0;
@@ -277,7 +282,7 @@ header {
 
 
 .appointment a{
-  font-family: 'Tinos', sans-serif;
+  font-family: var(--header-font);
   text-decoration: none;
   color: #000;
   margin: .5rem 0;
@@ -324,12 +329,14 @@ header {
 
 .services-title {
   font-size: var(--small-text);
+  margin: 1rem 0;
 }
 
 .services-subtitle, .about-subtitle {
   font-size: var(--default-text);
   line-height: 1.5;
   letter-spacing: .1em;
+  font-weight: 500;
 }
 
 .services-icon {
@@ -351,6 +358,7 @@ header {
   text-align: left;
   text-transform: uppercase;
   margin: 1rem 0 .5rem 0;
+  font-weight: 500;
 }
 
 .about-subtitle {
@@ -406,12 +414,12 @@ header {
 }
 
 .stylist-details {
-  font-family: var(--default-text);
+  font-family: var(--primary-font);
   text-align: center;
   text-transform: uppercase;
   font-size: var(--medium-text);
   font-weight: 700;
-  color: var();
+  color: var(--color-darkgrey);
   letter-spacing: .15rem;
 }
 
@@ -530,6 +538,7 @@ header {
   text-align: center;
   color: var(--color-white);
   padding: 2rem 0;
+  font-family: var(--primary-font);
 }
 
 .footer-logo {
@@ -538,9 +547,9 @@ header {
   font-size: var(--small-header);
 }
 
-.footer-subheaders {
+.footer-headers {
   font-size: var(--small-text);
-  /* padding-bottom: 1rem; */
+  margin-bottom: .5rem;
 }
 
 .footer__links--container {
@@ -573,6 +582,42 @@ header {
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+
+.footer__nav--items a{
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1rem;
+}
+
+.footer-socials {
+  margin: 1rem 0;
+}
+
+.footer-socials li{
+  font-size: 1.75rem;
+}
+
+.footer-socials li:nth-child(2) {
+  margin: 0 1rem;
+}
+
+.footer-socials li a{
+  color: var(--color-white);
+}
+
+.footer-copyright {
+  padding-top: 1rem;
+  border-top: 1px solid #fff;
+}
+
+.footer-copyright a{
+  color: var(--color-white);
+  transition: all .2s ease-in-out;
+}
+
+.footer-copyright a:hover{
+  color: #cc9c83;
 }
 /* .footer-subtitle {
   padding-bottom: .75rem;
