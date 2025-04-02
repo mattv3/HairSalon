@@ -95,7 +95,8 @@ img {
 
 body {
   font-family: var(--primary-font);
-  background-color: var(--color-white);
+  /* background-color: var(--color-white); */
+  background-color: var(--color-maincolor);
   color: var(--color-darkgrey);
 }
 
@@ -130,7 +131,6 @@ header {
 .off-screen {
   background-color: var(--color-maincolor);
   height: 100vh;
-  /* width: 100%; */
   width: 300px;
   max-width: 450px;
   position: fixed;
@@ -152,11 +152,8 @@ header {
 }
 
 .close-menu {
-  /* text-align: end; */
   padding: 1rem 0 1rem 1rem;
   cursor: pointer;
-  /* width: 90%; */
-  /* margin: 0 auto; */
 }
 
 .icon-container {
@@ -262,7 +259,6 @@ header {
 
 .hero {
   padding: 4rem 0;
-  /* background-color: #606C38; */
   background: linear-gradient(#606C38,#202b13);
 }
 
@@ -315,30 +311,26 @@ header {
   background-color: #2f3f1c;
 }
 
-
-/* .hero-image{
-  background: url(assets/hero-image1.png) no-repeat, center;
-  width: 100%;
-  height: 100%;
-} */
-
 /* HERO MEDIA QUERY */
 
 @media all and (min-width: 920px) {
+  .hero {
+    padding: 0;
+  }
+
   .hero-container {
-    position: relative;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero-text {
+    width: 60%;
+    align-content: center;
   }
 
   .hero-image {
-    display: block;
-    position: absolute;
-    /* background-image: url(assets/hero-image.png); */
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
+    width: 40%;
   }
 }
 
@@ -375,12 +367,12 @@ header {
 
 /* SERVICES MEDIA QUERY */
 
-/* @media all and (min-width: 720px) {
+@media all and (min-width: 920px){
   .services__tiles--row {
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;  
   }
-} */
+}
 
 
 /* ABOUT */
@@ -434,6 +426,30 @@ header {
   color: red;
 }
 
+/* ABOUT MEDIA QUERY */
+
+@media all and (min-width: 920px) {
+  .about-row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  .about__text--container {
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__video--container {
+    width: 45%;
+  }
+
+  .about-header {
+    align-self: flex-start;
+  }
+}
+
 /* STYLIST */
 .stylists {
   padding: 4rem 0;
@@ -448,18 +464,16 @@ header {
 }
 
 .img-container {
-  /* border: 1px solid red; */
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
 }
 
 .img-container img {
   width: 100%;
-  height: 330px;
-  display: block;
-  background-color: #000;
+  height: 100%;
   margin-bottom: 1rem;
+  object-fit: cover;
 }
 
 .stylist-details {
@@ -481,6 +495,14 @@ header {
   font-weight: 600;
 }
 
+/* STYLIST MEDIA QUERY */
+
+@media all and (min-width: 920px) {
+  .stylist-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 /* PROMO */
 
@@ -492,7 +514,7 @@ header {
 .promo__text--container {
   position: absolute;
   align-self: center;
-  left: 10%;
+  padding-left: 3rem;
   font-size: var(--medium-text);
   text-transform: uppercase;
   line-height: 1.5;
@@ -509,8 +531,14 @@ header {
 
 .promo-text span {
   font-weight: 900;
-  color: var();
 }
+
+.promo-img {
+  width: 100%;
+  height: 250px;
+}
+
+/*  */
 
 /* LOOKBOOK */
 
@@ -526,55 +554,42 @@ header {
   grid-gap: .5rem;
 }
 
-.section-five__wrapper img {
+.lookbook-container img {
   grid-template-columns: 1fr;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 
 .img-one {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   grid-row: 1 / 1;
   grid-column: 1 / 2;
 }
 
 .img-two {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   grid-row: 2 / 4;
   grid-column: 1 / 2;
 }
 
 .img-three {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   grid-row: 1 / 3;
   grid-column: 2 / 3;
 }
 
 .img-four {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   grid-row: 3 / 4;
   grid-column: 2 / 3;
 }
 
 .img-five {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   grid-row: 1 / 1;
   grid-column: 3 / 4;
 }
 
 .img-six {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   grid-row: 2 / 4;
   grid-column: 3 / 4;
 }
