@@ -95,7 +95,6 @@ img {
 
 body {
   font-family: var(--primary-font);
-  /* background-color: var(--color-white); */
   background-color: var(--color-maincolor);
   color: var(--color-darkgrey);
 }
@@ -136,15 +135,14 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
-  right: -450px;
-  
-  display: flex;
+  box-shadow: -15px 0 15px rgba(0,0,0,0.1);
+  display: none;
   flex-direction: column;
   justify-content: space;
   align-items: left;
   text-align: left;
   z-index: 999;
+  backdrop-filter: blur(10px);
 }
 
 .on-screen {
@@ -154,6 +152,7 @@ header {
 .close-menu {
   padding: 1rem 0 1rem 1rem;
   cursor: pointer;
+  /* font-size: 1.5rem; */
 }
 
 .icon-container {
@@ -192,6 +191,11 @@ header {
   text-align: center;
   padding-top: 1rem;
   font-size: 1.5rem;
+}
+
+.social-media a{
+  color: var(--color-darkgrey);
+  font-size: 1.75rem;
 }
 
 .logo, .footer-logo {
@@ -242,7 +246,6 @@ header {
 
   .onScreen__nav--list {
     display: flex;
-    /* padding: 0; */
   }
 
   .nav-magnifying-glass, .nav-shopping-bag {
@@ -289,7 +292,6 @@ header {
   padding: 1rem 0;
 }
 
-
 .appointment{
   font-family: var(--header-font);
   text-decoration: none;
@@ -311,7 +313,14 @@ header {
   background-color: #2f3f1c;
 }
 
+
 /* HERO MEDIA QUERY */
+
+@media all and (max-width: 920px) {
+  .hero-image {
+    display: none;
+  }
+}
 
 @media all and (min-width: 920px) {
   .hero {
@@ -392,7 +401,6 @@ header {
 .about-header {
   font-size: var(--small-header);
   color: #cc9c83;
-  /* text-align: center; */
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-weight: 500;
@@ -538,8 +546,6 @@ header {
   height: 250px;
 }
 
-/*  */
-
 /* LOOKBOOK */
 
 .lookbook {
@@ -624,10 +630,6 @@ header {
   gap: 30px;
 }
 
-/* .footer-explore {
-  dis
-} */
-
 .footer-explore, .footer-company, .footer-socials{
   display: flex;
   flex-direction: column;
@@ -683,37 +685,15 @@ header {
 .footer-copyright a:hover{
   color: #cc9c83;
 }
-/* .footer-subtitle {
-  padding-bottom: .75rem;
+
+
+/* FOOTER MEDIA QUERY */
+
+@media all and (min-width: 920px) {
+  .footer__links--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
 }
-
-.footer-explore {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-subtitle, .footer-explore, .footer-company, .footer-socials {
-  margin-bottom: 1rem;
-}
-
-.footer-copyright {
-  padding: .75rem 0;
-  border-top: 1px solid #fff;
-}
-
-.footer-explore li a, .footer-company li a {
-  text-decoration: none;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.footer-socials{
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__social--links li a{
-    color: #fff;
-
-} */
