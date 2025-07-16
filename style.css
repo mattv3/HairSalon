@@ -430,12 +430,11 @@ header {
   font-size: var(--small-header);
   color: #cc9c83;
   text-transform: uppercase;
-  margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .about-subtitle {
-  margin-bottom: 1.5rem;
+  margin: 1rem 0;
   text-align: center;
 }
 
@@ -445,6 +444,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
 }
 
 .play-button {
@@ -512,9 +517,9 @@ header {
 
 .img-container img {
   width: 100%;
-  height: 100%;
+  height: 500px;
   margin-bottom: 1rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .stylist-details {
